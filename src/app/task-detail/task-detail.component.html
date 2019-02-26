@@ -1,0 +1,30 @@
+<div class="container task-details-page">
+
+    <div class="u-center">
+        <h1 class="page-header"> Task Detail</h1>
+    </div>
+
+    <div class="details-section">
+
+        <div class="details-section__id">
+            <p> Task ID : {{ task.id }}</p>
+        </div>
+
+        <div class="details-section__name">
+            <strong>Name : </strong>
+            <input [(ngModel)]="task.name" placeholder="Name"/>
+        </div>
+
+        <div class="details-section__desc">
+            <strong>Description: </strong>
+            <textarea [(ngModel)]="task.desc" placeholder="Description" rows="20" cols="6"></textarea>
+        </div>
+        
+    </div>
+
+    <div class="details-btn">
+        <button class="btn-primary" (click)="save()">Save</button>
+    </div>
+
+
+</div>

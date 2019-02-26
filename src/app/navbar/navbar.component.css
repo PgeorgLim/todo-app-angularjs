@@ -1,0 +1,51 @@
+.header {
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#373B44), to(#73C8A9));
+  background: linear-gradient(to right, #373B44, #73C8A9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar {
+  font-size: 1.35rem;
+  padding: 1.6rem 0rem;
+}
+
+.navbar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.navbar a {
+  color: whitesmoke;
+}
+
+.navbar__brand {
+  float: left;
+  font-weight: bold;
+}
+
+.navbar__list {
+  float: right;
+}
+
+.navbar__list ul {
+  list-style-type: none;
+}
+
+.navbar__list ul li {
+  display: inline-block;
+}
+
+.navbar__list ul li a {
+  padding: .8rem 1.6rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.navbar__list ul li a:hover {
+  color: #73C8A9;
+  font-weight: bold;
+  background-color: whitesmoke;
+}
+/*# sourceMappingURL=navbar.component.css.map */

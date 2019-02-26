@@ -1,0 +1,127 @@
+
+@import '../base';
+
+$bg-todo-items-color: #f3f3f3;
+$primary-green-color: #29a074;
+$primary-black-color: #373B44;
+
+.addtasker{
+
+    &__form{
+        display: block;
+        font-size: 1rem;
+        &::after{
+            @include clearfixStyle;
+        }
+    }
+
+    &__input{
+        float: left;
+        padding: .8rem;
+        width: 30%;
+    }
+
+    &__button{
+        float: left;
+        margin-left: 1rem;
+        width: 30%;
+    }
+
+    &__results{ 
+        display: block; 
+        margin-top: 1rem;
+        height: 2.7rem;
+        width: 50%;
+    }
+
+    %results-text{
+        font-size: 1rem;
+        padding: 1rem;
+        padding-left: 0rem;
+        font-weight: bold;
+    }
+
+    &__error{
+        @extend %results-text;
+        color: red;
+    }
+
+    &__success{
+        @extend %results-text;
+        color: green;
+    }
+}
+
+.tasks-list{
+
+    display: block;
+    float: left;
+    width: 48%;
+    margin-bottom: 3rem;
+
+    ul{
+        margin-top: 1rem;
+        box-shadow: .4rem .4rem 1.2rem rgba($color: black, $alpha: .3);
+
+        li{
+            padding: .8rem .8rem 1.2rem 1.2rem;
+            font-size: .95rem;
+            width: 100%;
+        }
+    }
+
+    &__text{
+        max-width: 70%;
+        display: block;
+        float: left;
+    }
+
+    %cta-buttons{
+        float: right;
+        text-decoration: none;
+        color: $primary-green-color;
+        font-size: 1.2rem;
+        background-color: white;
+        border: 1px solid $primary-black-color;
+        border-radius: 50%;
+        padding: .32rem;
+        transition: all .2s;
+
+        &:hover{
+            background-color: $primary-green-color;
+            color: white;
+            border-color: white;
+        }
+    }
+
+    &__complete{
+        @extend %cta-buttons;
+        float: none !important;
+        margin-left: 1rem;
+    }
+
+    &__edit{
+        @extend %cta-buttons;
+    
+    }
+
+    &__delete{
+        @extend %cta-buttons;
+        margin-left: 1rem;
+    }
+
+    &:last-child{
+        margin-left: 1.5rem;
+
+        ul{ background-color: rgba($primary-black-color, .15); }
+    }
+}
+
+.list-login{
+    a{ 
+        color: $primary-black-color; 
+        font-weight: bold;
+    }
+}
+
+

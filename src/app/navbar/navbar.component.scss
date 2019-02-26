@@ -1,0 +1,58 @@
+
+@import '../base';
+
+$navbar-color-green: #73C8A9;
+$navbar-color-black: #373B44;
+$navbar-color-white: whitesmoke;
+
+.header{
+    background: -webkit-linear-gradient(to right, $navbar-color-black, $navbar-color-green);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $navbar-color-black, $navbar-color-green); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar{
+
+    font-size: 1.35rem;
+    padding: 1.6rem 0rem;
+
+    &::after{ @include clearfixStyle; }
+
+    a{
+        color: $navbar-color-white;
+    }
+
+    &__brand{
+        float: left;
+        font-weight: bold;
+    }   
+
+    // &__log-box{
+       
+    // }
+
+    &__list{
+        float: right;
+
+        ul{ 
+            list-style-type: none; 
+
+            li{
+                display: inline-block;
+
+                a{
+                    padding: .8rem 1.6rem;               
+                    transition: all .2s;
+                                        
+                    &:hover{
+                        color: $navbar-color-green;
+                        font-weight: bold;
+                        background-color: whitesmoke;
+                    }
+                }
+            }        
+        }
+
+    }
+
+
+}

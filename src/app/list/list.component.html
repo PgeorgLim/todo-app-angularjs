@@ -1,0 +1,77 @@
+<div class="container">
+
+        <div class="u-center">
+            <h1 class="page-header"> My Todo List</h1>
+        </div>
+    
+    <div *ngIf="loginService.isLogin">    
+        <div class="addtasker">
+            <form class="addtasker__form" [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+            
+                <input class="addtasker__input" type="text" formControlName="taskname" placeholder="Add Task">
+                
+                <div class="addtasker__button">
+                    <input type="submit" value="Add Task" class="btn-primary">
+                </div>
+
+            </form>
+            
+            <div class="addtasker__results">
+                <div *ngIf="submitted && !success" class="addtasker__error">
+                    <div *ngIf="taskForm.controls.taskname.errors.required">Task Name is required</div>
+                </div>
+                <div *ngIf="submitted && success" class="addtasker__success">
+                    Task has been added!
+                </div>
+            </div>         
+        </div>
+
+        <div class="tasks-section">
+
+            <div class="tasks-list">
+                <h1 class="heading-1">Pending Tasks</h1>
+                <ul *ngIf="pendingTasks.length > 0">
+                    <li *ngFor="let t of pendingTasks">
+                        <span class="tasks-list__text">{{ t.name }}</span>
+
+                        <button class="tasks-list__complete" (click)="completedTask(t.id)">
+                                <fa-icon [icon]="faCheck"></fa-icon>
+                        </button>
+
+                        <button class="tasks-list__delete" (click)="deleteTask(t.id)">
+                                <fa-icon [icon]="faTrash"></fa-icon>
+                        </button>
+                        <a class="tasks-list__edit" routerLink="/task-detail/{{t.id}}" >
+                            <fa-icon [icon]="faEdit"></fa-icon>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tasks-list">
+                <h1 class="heading-1 heading-1--red">Completed Tasks</h1>
+                <ul *ngIf="completedTasks.length > 0">
+                    <li *ngFor="let t of completedTasks">{{ t.name }}
+                        <button class="tasks-list__delete" (click)="deleteTask(t.id)">
+                                <fa-icon [icon]="faTrash"></fa-icon>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div *ngIf="!loginService.isLogin">
+
+        <div class="u-mtop list-login">
+            <p><a routerLink="../logging" >Login now</a> 
+                and start creating or manage your list  :)
+            </p>
+             
+        </div>
+
+    </div>  
+</div>

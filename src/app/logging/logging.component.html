@@ -1,0 +1,20 @@
+<div class="container">
+
+    <div *ngIf="!loginRes">
+      <h1 class="heading-1">Log in now !</h1>
+      <p>
+          Log in now and create your own todo list.
+      </p>
+
+      <div class="u-mtop">
+          <button class="btn-primary" (click)="loginUser()" >Login</button>
+      </div>
+    </div>
+
+    <div *ngIf="loginRes" class="u-mtop">
+        <p>
+            You are logged in ! 
+        </p>      
+    </div>
+    
+</div>

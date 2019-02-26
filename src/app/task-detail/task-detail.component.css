@@ -1,0 +1,41 @@
+.task-details-page {
+  margin-bottom: 5rem;
+}
+
+.details-section {
+  width: 40%;
+}
+
+.details-section__id {
+  font-style: italic;
+}
+
+.details-section .details-section__name, .details-section .details-section__desc {
+  color: red;
+  margin-top: 1.5rem;
+}
+
+.details-section .details-section__name input, .details-section .details-section__desc input, .details-section .details-section__name textarea, .details-section .details-section__desc textarea {
+  display: block;
+  margin-top: 1rem;
+  padding: .6rem;
+  width: 100%;
+  color: #373B44;
+}
+
+.details-section .details-section__name input:focus, .details-section .details-section__desc input:focus, .details-section .details-section__name textarea:focus, .details-section .details-section__desc textarea:focus {
+  outline-color: #29a074;
+}
+
+.details-section .details-section__name textarea, .details-section .details-section__desc textarea {
+  font-family: inherit;
+}
+
+.details-section__desc input {
+  height: 4rem;
+}
+
+.details-btn {
+  margin-top: 2rem;
+}
+/*# sourceMappingURL=task-detail.component.css.map */

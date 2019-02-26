@@ -1,0 +1,26 @@
+<header class="header">
+
+  <nav class="navbar container">
+
+
+    <div class="navbar__brand">
+      <a routerLink="/home" class="navbar__log-box">{{ apptitle }}</a>
+    </div>
+    
+
+    <div class="navbar__list">
+      <ul>
+        <li><a routerLink="/list">My List</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li *ngIf="!loginService.isLogin"><a routerLink="/logging">Log In</a></li>
+        <li *ngIf="loginService.isLogin">
+            <button class="btn-primary btn-primary--icon" title="Logout" (click)="logout()">
+                <fa-icon [icon]="faSignOutAlt"></fa-icon>
+            </button>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+</header>

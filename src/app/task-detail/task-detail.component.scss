@@ -1,0 +1,47 @@
+$primary-green-color: #29a074;
+$primary-black-color: #373B44;
+
+.task-details-page{
+    margin-bottom: 5rem;
+}
+.details-section{
+
+    width: 40%;
+
+    &__id{
+        font-style: italic;
+    }
+
+    %text-details{
+        color: red;
+        margin-top: 1.5rem;
+
+        & input, & textarea{
+            display: block;
+            margin-top: 1rem;
+            padding: .6rem;
+            width: 100%;
+            color: $primary-black-color;
+
+            &:focus{
+                outline-color: $primary-green-color;
+            }
+        }
+
+        & textarea{ font-family: inherit;}
+    }
+
+    &__name{
+        @extend %text-details;
+    }
+
+    &__desc{
+        @extend %text-details;
+
+        & input{ height: 4rem; }
+    }
+}
+
+.details-btn{ 
+    margin-top: 2rem;
+}

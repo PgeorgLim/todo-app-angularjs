@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+//Variables
+$primary-color: #29a074;
+$text-color: #373B44;
+$text-color-white: whitesmoke;
+$page-header-color: #3c484d;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    box-sizing: border-box;
+    font-size: 60%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+ul{  list-style-type: none;  }
+
+/***  Typography  ***/
+a{ text-decoration: none; }
+
+p, strong{
+    font-size: 1.2rem;
+    color: $text-color;
+}
+
+.u-center{ text-align: center; }
+
+.page-header{
+    font-size: 2.1rem;
+    color: $page-header-color;
+    font-weight: bold;
+    padding: 1rem 0;    
+}
+
+.heading-1{
+    font-size: 1.8rem;
+    color: $primary-color;
+    padding: 1.5rem 0;
+
+    &--red{
+        color: orangered;
+    }
+}
+
+.no-padding-top{
+    padding-top: 0rem;
+}
+
+.u-mtop{
+    margin-top: 1.5rem;
+}
+/***  End of Typography  ***/
+
+
+
+
+/**** Buttons  ****/ 
+.btn-primary{
+    padding: 1rem 1.5rem;
+    background-color: $primary-color;
+    color: $text-color-white;
+    border-radius: 4px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all .35s;
+
+    &--icon{
+        padding: .8rem 1rem;
+        margin-left: .8rem;
+        background-color: transparent;
+        border: 1px solid $text-color-white;
+    }
+
+    &:hover{
+        box-shadow: 0.2rem 0.2rem 1rem rgba(55, 59, 68, 0.6);
+    }
+}
+
+/***  End of Buttons  ***/

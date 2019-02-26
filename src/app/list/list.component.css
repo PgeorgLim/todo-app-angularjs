@@ -1,0 +1,111 @@
+.addtasker__form {
+  display: block;
+  font-size: 1rem;
+}
+
+.addtasker__form::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.addtasker__input {
+  float: left;
+  padding: .8rem;
+  width: 30%;
+}
+
+.addtasker__button {
+  float: left;
+  margin-left: 1rem;
+  width: 30%;
+}
+
+.addtasker__results {
+  display: block;
+  margin-top: 1rem;
+  height: 2.7rem;
+  width: 50%;
+}
+
+.addtasker .addtasker__error, .addtasker .addtasker__success {
+  font-size: 1rem;
+  padding: 1rem;
+  padding-left: 0rem;
+  font-weight: bold;
+}
+
+.addtasker__error {
+  color: red;
+}
+
+.addtasker__success {
+  color: green;
+}
+
+.tasks-list {
+  display: block;
+  float: left;
+  width: 48%;
+  margin-bottom: 3rem;
+}
+
+.tasks-list ul {
+  margin-top: 1rem;
+  -webkit-box-shadow: 0.4rem 0.4rem 1.2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0.4rem 0.4rem 1.2rem rgba(0, 0, 0, 0.3);
+}
+
+.tasks-list ul li {
+  padding: .8rem .8rem 1.2rem 1.2rem;
+  font-size: .95rem;
+  width: 100%;
+}
+
+.tasks-list__text {
+  max-width: 70%;
+  display: block;
+  float: left;
+}
+
+.tasks-list .tasks-list__complete, .tasks-list .tasks-list__edit, .tasks-list .tasks-list__delete {
+  float: right;
+  text-decoration: none;
+  color: #29a074;
+  font-size: 1.2rem;
+  background-color: white;
+  border: 1px solid #373B44;
+  border-radius: 50%;
+  padding: .32rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.tasks-list .tasks-list__complete:hover, .tasks-list .tasks-list__edit:hover, .tasks-list .tasks-list__delete:hover {
+  background-color: #29a074;
+  color: white;
+  border-color: white;
+}
+
+.tasks-list__complete {
+  float: none !important;
+  margin-left: 1rem;
+}
+
+.tasks-list__delete {
+  margin-left: 1rem;
+}
+
+.tasks-list:last-child {
+  margin-left: 1.5rem;
+}
+
+.tasks-list:last-child ul {
+  background-color: rgba(55, 59, 68, 0.15);
+}
+
+.list-login a {
+  color: #373B44;
+  font-weight: bold;
+}
+/*# sourceMappingURL=list.component.css.map */
